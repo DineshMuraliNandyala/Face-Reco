@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video Input Selection</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <h1>Select Video Input Source</h1>
+    <form action="/select_source" method="post" enctype="multipart/form-data">
+        <button type="submit" name="source" value="webcam">Use Webcam</button>
+        <label for="link">Video Link:</label>
+        <input type="text" id="link" name="link" placeholder="Enter video link">
+        <button type="submit" name="source" value="link">Submit Link</button>
+        <label for="file">Video File:</label>
+        <input type="file" id="file" name="file">
+        <button type="submit" name="source" value="file">Submit File</button>
+    </form>
+    <div class="video-container">
+        <h2>Video Feed</h2>
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+        <h2>Processed Video Feed</h2>
+        <img src="{{ url_for('processed_video_feed') }}" alt="Processed Video Feed">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+Flask
+opencv-python-headless
+face_recognition
+tensorflow
+mtcnn
+werkzeug
